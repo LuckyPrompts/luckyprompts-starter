@@ -1,0 +1,2 @@
+date,label,model,provider,input_tokens,output_tokens,total_tokens,cost_usd
+2026-05-03 19:26,hello_local,mistral:7b,ollama,24,67,91,0.000000
