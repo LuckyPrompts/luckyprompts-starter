@@ -1,0 +1,11 @@
+services:
+  luckyprompts:
+    build: .
+    volumes:
+      - .:/app
+      - ./token_log.csv:/app/token_log.csv
+    working_dir: /app
+    environment:
+      - OLLAMA_HOST=http://host.docker.internal:11434
+    env_file:
+      - .env

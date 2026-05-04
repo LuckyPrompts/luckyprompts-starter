@@ -1,0 +1,26 @@
+{
+  "name": "luckyprompts-starter",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "remoteEnv": {
+    "OLLAMA_HOST": "http://host.docker.internal:11434"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+      }
+    }
+  },
+  "forwardPorts": [],
+  "mounts": [
+    "source=${localWorkspaceFolder}/token_log.csv,target=/workspaces/luckyprompts-starter/token_log.csv,type=bind,consistency=cached"
+  ]
+}
